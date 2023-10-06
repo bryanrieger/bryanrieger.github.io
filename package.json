@@ -1,0 +1,23 @@
+{
+  "name": "bryanriegergithub.io",
+  "version": "0.0.1",
+  "description": "Developer Site - http://bryanrieger.github.io",
+  "author": "Bryan Rieger <bryan@yiibu.com>",
+  "keywords": [
+    "artist", "designer", "writer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bryanrieger/bryanrieger.github.io"
+  },
+  "dependencies": {
+    "luxon": "3.4.3",
+    "@11ty/eleventy": "~2.0.1",
+    "@11ty/eleventy-plugin-rss": "~1.2.0"
+  },
+  "scripts": {
+    "build": "rm -rfv build && eleventy",
+    "serve": "rm -rfv build && sleep .25 && open http://localhost:8080 & eleventy --serve",
+    "clean": "rm -rfv build"
+  }
+}

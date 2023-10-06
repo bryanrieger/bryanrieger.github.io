@@ -1,0 +1,24 @@
+{
+	"title": "Bryan Rieger",
+	"shortname": ".b*",
+	"domain": "bryanrieger.github.io",
+	"language": "en",
+	"description": "To be done.",
+	"keywords": [ "books", "games", "illustration", "fiction", "kidlit" ],
+	"copyright": "Copyright Bryan Rieger. All rights reserved.",
+	"author": "Bryan Rieger",
+	"social": {
+		"twitter": "bryanrieger",
+		"instagram": "bryanrieger"
+	},
+	"icons": {
+		"color": "#544087",
+		"mask": "mask-icon.svg",
+		"touch": "touch-icon.png"
+	},
+	"theme": "#0033ff",
+	"feed": "/updates.xml",
+	"rating": "General",
+	"generator": "Handmade with ❤️ in Montréal, Canada",
+	"robots": "all"
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="{{ site.language }}" prefix="og: http://ogp.me/ns#">
+<head>
+	<title>{{ title }}</title>
+	{% include "head/meta" %}
+	{% include "head/links" %}
+	{% include "head/styles" %}
+	{% include "head/scripts" %}
+	{% if page.head %}
+		{{ page.head }}
+	{% endif %}
+</head>
+<body class="{{ body }}">
+	{% include "header" %}
+	<main>
+		{{ content }}
+	</main>
+	{% include "footer" %}
+	
+	<div id="assets">
+	{% if page.assets %}
+	  {{ page.assets }}
+	{% endif %}
+	</div>
+	{% if page.end %}
+		{{ page.end }}
+	{% endif %}
+</body>
+</html>

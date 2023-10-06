@@ -1,0 +1,26 @@
+---
+layout: null
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.name }}</title>
+  <subtitle>{{ site.description }}</subtitle>
+  <author>
+      <name>{{ site.author.name }}</name>
+  </author>
+  <rights type="html">{{ site.copyright}}</rights>
+  <link href="https://{{ site.domain }}/feed.xml" rel="self" />
+  <link href="https://{{ site.domain }}" />
+  <id>{{ site.url }}</id>
+  <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc822 }}</updated>
+  {%- for post in collections.all %}
+  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(url) }}{% endset %}<entry>
+      <title>{{ post.data.title }}</title>
+      <link href="https://{{ site.domain }}{{ absolutePostUrl | cleanURL }}" />
+      <id>{{ site.domain }}{{ absolutePostUrl | cleanURL }}</id>
+      <updated>{{ post.date | dateToRfc822 }}</updated>
+      <summary>{{ post.data.description | htmlToAbsoluteUrls(absolutePostUrl) }}</summary>
+  </entry>{%- endfor %}
+</feed>
