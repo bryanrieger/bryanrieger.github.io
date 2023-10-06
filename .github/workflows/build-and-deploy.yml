@@ -1,4 +1,4 @@
-name: Build Eleventy
+name: build eleventy
 on:
   push:
     branches:
